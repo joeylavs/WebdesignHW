@@ -1,1 +1,46 @@
+Fullscreen GIF Background
+body {
+  margin: 0;
+  padding: 0;
+  background: url("images/giphy.gif") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+Dark transparent box for readability
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+Horror-style headers
+h1, h2 {
+  text-shadow: 0 0 10px red;
+  margin-top: 0;
+}
+
+Center header + footer
+header, footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+Image styling
+img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 8px;
+  margin: 1rem;
+  box-shadow: 0 0 15px black;
+}
+
+Section spacing
+section {
+  margin-bottom: 2rem;
+}
 
