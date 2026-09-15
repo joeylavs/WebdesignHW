@@ -47,3 +47,40 @@ img {
 header, footer {
   padding: 1rem;
 }
+
+* Horror-Themed Navigation *
+nav {
+  background-color: #0a0a0a; /* deep black */
+  padding: 15px;
+  border-bottom: 3px solid #8b0000; /* dark blood red */
+  box-shadow: 0 0 20px #8b0000; /* glowing red shadow */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 25px;
+}
+
+nav a {
+  color: #cfcfcf; /* pale gray */
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 8px 12px;
+  transition: 0.3s ease;
+  text-shadow: 0 0 5px #8b0000; /* faint red glow */
+}
+
+nav a:hover {
+  color: #ff0000; /* bright blood red */
+  text-shadow: 0 0 15px #ff0000;
+  transform: scale(1.1);
+}
