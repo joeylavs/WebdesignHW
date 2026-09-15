@@ -48,12 +48,12 @@ header, footer {
   padding: 1rem;
 }
 
-* Horror-Themed Navigation *
+* HORROR DRIPPING BLOOD NAV *
 nav {
-  background-color: #0a0a0a; /* deep black */
-  padding: 15px;
-  border-bottom: 3px solid #8b0000; /* dark blood red */
-  box-shadow: 0 0 20px #8b0000; /* glowing red shadow */
+  background-color: #000000;
+  padding: 20px;
+  border-bottom: 3px solid #8b0000;
+  box-shadow: 0 0 25px #8b0000;
 }
 
 nav ul {
@@ -65,22 +65,59 @@ nav ul {
 
 nav li {
   display: inline-block;
-  margin: 0 25px;
+  margin: 0 30px;
+  position: relative;
 }
 
 nav a {
-  color: #cfcfcf; /* pale gray */
+  color: #cfcfcf;
   text-decoration: none;
-  font-family: Arial, sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   letter-spacing: 2px;
-  padding: 8px 12px;
+  padding: 10px 15px;
+  text-shadow: 0 0 6px #8b0000;
   transition: 0.3s ease;
-  text-shadow: 0 0 5px #8b0000; /* faint red glow */
 }
 
+* BLOOD DRIP EFFECT *
+nav li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 6px;
+  height: 18px;
+  background: #8b0000;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+* Extra drips *
+nav li::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 3px;
+  height: 10px;
+  background: #5a0000;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(8px);
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+* Hover makes the blood drip appear *
+nav li:hover::after,
+nav li:hover::before {
+  opacity: 1;
+}
+
+* Hover glow *
 nav a:hover {
-  color: #ff0000; /* bright blood red */
+  color: #ff0000;
   text-shadow: 0 0 15px #ff0000;
   transform: scale(1.1);
 }
