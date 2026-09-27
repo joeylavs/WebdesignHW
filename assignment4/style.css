@@ -155,3 +155,22 @@ nav a:hover {
   font-size: 0.9em;
   line-height: 1.4em;
 }
+.gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  flex: 1 1 45%;
+  background: #111;
+  padding: 10px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 6px;
+}
