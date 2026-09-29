@@ -174,3 +174,17 @@ nav a:hover {
   width: 100%;
   border-radius: 6px;
 }
+table {
+  margin: 0 auto;   /* centers the table */
+  border-collapse: collapse;
+  width: 70%;       /* optional, makes it look cleaner */
+  text-align: center;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #444;
+}
+section {
+  text-align: center;
+}
