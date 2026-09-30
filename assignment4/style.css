@@ -247,11 +247,16 @@ section {
 }
 
 
-.gallery-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
+.gallery-item {
+  background-color: #111;
+  padding: 15px;
+  border: 2px solid #900;
+  border-radius: 8px;
+  width: 250px; /* smaller width so all 3 fit */
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 
 
 .gallery-item:hover {
@@ -265,3 +270,9 @@ section {
   color: #eee;
   font-size: 0.9rem;
 }
+  .gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
