@@ -230,7 +230,8 @@ section {
   justify-content: center;
   align-items: flex-start;
   gap: 20px;
-  flex-wrap: nowrap;     
+  flex-wrap: nowrap;
+  width: 100%;
 }
 
 
