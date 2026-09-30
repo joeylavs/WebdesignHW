@@ -211,3 +211,53 @@ tr:hover {
 section {
   text-align: center;
 }
+
+.gallery {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff3333; 
+}
+
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; 
+}
+
+
+.gallery-item {
+  background-color: #111;
+  padding: 15px;
+  border: 2px solid #900;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+}
+
+
+.gallery-item p {
+  margin-top: 10px;
+  color: #eee;
+  font-size: 0.9rem;
+}
