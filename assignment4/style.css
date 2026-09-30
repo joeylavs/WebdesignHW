@@ -155,25 +155,11 @@ nav a:hover {
   font-size: 0.9em;
   line-height: 1.4em;
 }
-.gallery {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
 
-.gallery-item {
-  flex: 1 1 45%;
-  background: #111;
-  padding: 10px;
-  border-radius: 8px;
-  color: white;
-  text-align: center;
-}
 
-.gallery-item img {
-  width: 100%;
-  border-radius: 6px;
-}
+
+
+
 
 table {
   margin: 30px auto;
@@ -236,15 +222,7 @@ section {
 
 
 
-.gallery-item {
-  background-color: #111;
-  padding: 15px;
-  border: 2px solid #900;
-  border-radius: 8px;
-  width: 300px;
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+
 
 
 .gallery-item {
