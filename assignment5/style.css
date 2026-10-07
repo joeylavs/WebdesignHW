@@ -241,7 +241,7 @@ section {
   display: block;
 }
 
-/* Media Query (Assignment 5 requirement) */
+/* Media Query */
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
