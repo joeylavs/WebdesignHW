@@ -1,3 +1,4 @@
+/* Background overlay */
 body::before {
   content: "";
   position: fixed;
@@ -5,20 +6,22 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.85); 
+  background: rgba(0, 0, 0, 0.85);
   z-index: -1;
 }
 
+/* Body */
 body {
   margin: 0;
   padding: 0;
   background: url("images/giphy.gif") repeat;
-  background-size: 250px; 
+  background-size: 250px;
   font-family: Arial, sans-serif;
   color: white;
-  text-align: center; 
+  text-align: center;
+}
 
-* Main content *
+/* Main content */
 main {
   max-width: 800px;
   margin: 2rem auto;
@@ -27,28 +30,28 @@ main {
   border-radius: 10px;
 }
 
-* Horror-style headers *
+/* Horror-style headers */
 h1, h2 {
   text-shadow: 0 0 10px red;
   margin-top: 0;
 }
 
-
+/* Images */
 img {
   display: block;
-  margin: 1rem auto; 
-  width: 60%;        
-  max-width: 300px;  
+  margin: 1rem auto;
+  width: 60%;
+  max-width: 300px;
   border-radius: 8px;
   box-shadow: 0 0 15px black;
 }
 
-* Header + footer *
+/* Header + footer */
 header, footer {
   padding: 1rem;
 }
 
-
+/* Navigation */
 nav {
   background-color: #000000;
   padding: 20px;
@@ -76,9 +79,8 @@ nav a {
   padding: 10px 15px;
   text-shadow: 0 0 6px #8b0000;
   transition: 0.3s ease;
-  position: relative; 
+  position: relative;
 }
-
 
 nav a::after {
   content: "";
@@ -108,12 +110,10 @@ nav a::before {
   transition: 0.4s ease;
 }
 
-
 nav a:hover::after,
 nav a:hover::before {
   opacity: 1;
 }
-
 
 nav a:hover {
   color: #ff0000;
@@ -121,11 +121,11 @@ nav a:hover {
   transform: scale(1.1);
 }
 
+/* Cards */
 .card-group {
   text-align: center;
   margin-top: 40px;
 }
-
 
 .card {
   display: inline-block;
@@ -138,7 +138,6 @@ nav a:hover {
   vertical-align: top;
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
 }
-
 
 .card img {
   width: 100%;
@@ -156,23 +155,19 @@ nav a:hover {
   line-height: 1.4em;
 }
 
-
-
-
-
-
+/* Table */
 table {
   margin: 30px auto;
   width: 75%;
   border-collapse: collapse;
-  background-color: #111;        
-  color: #eee;                   
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3); 
-  border: 2px solid #900;        
-
+  background-color: #111;
+  color: #eee;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  border: 2px solid #900;
+}
 
 th {
-  background-color: #900;        
+  background-color: #900;
   color: #fff;
   padding: 12px;
   font-size: 1.1rem;
@@ -180,13 +175,11 @@ th {
   text-transform: uppercase;
 }
 
-
 td {
   padding: 10px;
   border: 1px solid #333;
   text-align: center;
 }
-
 
 tr:hover {
   background-color: #222;
@@ -194,10 +187,12 @@ tr:hover {
   transition: 0.2s ease-in-out;
 }
 
+/* Sections */
 section {
   text-align: center;
 }
 
+/* Gallery */
 .gallery {
   text-align: center;
   margin: 40px 0;
@@ -206,13 +201,12 @@ section {
 .gallery h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #ff3333; 
+  color: #ff3333;
 }
-
 
 .gallery-container {
   display: flex;
-  flex-direction: row;   
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
   gap: 20px;
@@ -220,36 +214,51 @@ section {
   width: 100%;
 }
 
-
-
-
-
-
 .gallery-item {
   background-color: #111;
   padding: 15px;
   border: 2px solid #900;
   border-radius: 8px;
-  width: 250px; /* smaller width so all 3 fit */
+  width: 250px;
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
-
 
 .gallery-item:hover {
   transform: scale(1.05);
   box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
 }
 
-
 .gallery-item p {
   margin-top: 10px;
   color: #eee;
   font-size: 0.9rem;
 }
-  .gallery-item img {
+
+.gallery-item img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* Media Query (Assignment 5 requirement) */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .card-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-container {
+    flex-direction: column;
+  }
+
+  img {
+    width: 90%;
+    max-width: 350px;
+  }
 }
