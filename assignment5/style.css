@@ -1,3 +1,11 @@
+:root {
+  --bg-dark: #0B0B0D;
+  --bg-section: #1A1A1F;
+  --accent-red: #E50914;
+  --text-light: #D6D6D6;
+  --highlight-gold: #F2C94C;
+}
+
 /* Background overlay */
 body::before {
   content: "";
