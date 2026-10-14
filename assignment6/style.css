@@ -21,25 +21,30 @@ body::before {
   z-index: -2;
 }
 
-/* Fog effect */
+/*Fog Effect*/
 body::after {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 140%;
+  height: 140%;
   pointer-events: none;
-  background: url('https://i.imgur.com/8QfQG7v.png');
-  opacity: 0.15;
-  animation: fogMove 20s linear infinite;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.06), transparent 60%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.05), transparent 55%),
+    radial-gradient(circle at 30% 80%, rgba(255,255,255,0.04), transparent 60%);
+  opacity: 0.18;
+  animation: fogMove 30s linear infinite;
   z-index: -1;
 }
 
 @keyframes fogMove {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-200px); }
+  0%   { transform: translate(-10%, -10%); }
+  50%  { transform: translate(5%, 5%); }
+  100% { transform: translate(-10%, -10%); }
 }
+
 
 /* BODY */
 body {
