@@ -124,26 +124,47 @@ nav a {
   position: relative;
 }
 
-/* Blood ooze GIF effect */
+/* BLOOD OOZE EFFECT */
 nav a::after {
   content: "";
   position: absolute;
   left: 50%;
   top: 100%;
-  width: 120px;        
-  height: 50px;        
-  background: url("https://animated-gif-creator.com/images/03/dripping-blood-gif-7-gif-images-download_2.gif") no-repeat center;
-  background-size: contain;
+  width: 8px;
+  height: 0;
+  background: var(--accent-red);
+  border-radius: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 999;
+  animation: none;
+  box-shadow: 0 0 8px var(--accent-red);
 }
+
 
 nav a:hover::after {
   opacity: 1;
+  animation: bloodDrip 1.2s ease forwards;
 }
+
+@keyframes bloodDrip {
+  0% {
+    height: 0;
+    border-radius: 50%;
+  }
+  40% {
+    height: 20px;
+    border-radius: 50%;
+  }
+  70% {
+    height: 35px;
+    border-radius: 30%;
+  }
+  100% {
+    height: 45px;
+    border-radius: 0;
+  }
+}
+
 
 
 nav a:hover {
