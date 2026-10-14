@@ -1,3 +1,4 @@
+/* COLOR VARIABLES */
 :root {
   --bg-dark: #0B0B0D;
   --bg-section: #1A1A1F;
@@ -6,7 +7,9 @@
   --highlight-gold: #F2C94C;
 }
 
-/* Background overlay */
+/* GLOBAL BACKGROUND + FOG */
+
+/* Dark overlay */
 body::before {
   content: "";
   position: fixed;
@@ -15,36 +18,72 @@ body::before {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.85);
+  z-index: -2;
+}
+
+/* Fog effect */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: url('https://i.imgur.com/8QfQG7v.png');
+  opacity: 0.15;
+  animation: fogMove 20s linear infinite;
   z-index: -1;
 }
 
-/* Body */
+@keyframes fogMove {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-200px); }
+}
+
+/* BODY */
 body {
   margin: 0;
   padding: 0;
   background: var(--bg-dark);
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: var(--text-light);
   text-align: center;
 }
 
-/* Main content */
+/* MAIN CONTENT BOX */
 main {
-  max-width: 800px;
+  max-width: 900px;
   margin: 2rem auto;
   background: var(--bg-section);
   padding: 2rem;
   border-radius: 10px;
+  box-shadow: 0 0 20px var(--accent-red);
 }
 
-/* Horror-style headers */
+/* HEADERS */
 h1, h2 {
   color: var(--accent-red);
   text-shadow: 0 0 10px var(--accent-red);
   margin-top: 0;
 }
 
-/* Images */
+header h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 3rem;
+  animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  5% { opacity: 0.4; }
+  10% { opacity: 1; }
+  15% { opacity: 0.2; }
+  20% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+/* IMAGES */
 img {
   display: block;
   margin: 1rem auto;
@@ -54,18 +93,14 @@ img {
   box-shadow: 0 0 15px var(--accent-red);
 }
 
-/* Header + footer */
-header, footer {
-  padding: 1rem;
-  color: var(--text-light);
-}
-
-/* Navigation */
+/* NAVIGATION */
 nav {
   background-color: var(--bg-section);
   padding: 20px;
   border-bottom: 3px solid var(--accent-red);
   box-shadow: 0 0 25px var(--accent-red);
+  position: relative;
+  z-index: 10;
 }
 
 nav ul {
@@ -73,11 +108,13 @@ nav ul {
   margin: 0;
   padding: 0;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 nav li {
-  display: inline-block;
-  margin: 0 30px;
+  position: relative;
 }
 
 nav a {
@@ -91,13 +128,33 @@ nav a {
   position: relative;
 }
 
+/* Blood drip effect */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  width: 6px;
+  height: 0;
+  background: var(--accent-red);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  transition: height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+nav a:hover::after {
+  height: 18px;
+  opacity: 1;
+  box-shadow: 0 0 10px var(--accent-red);
+}
+
 nav a:hover {
   color: var(--accent-red);
-  text-shadow: 0 0 15px var(--accent-red);
   transform: scale(1.1);
 }
 
-/* Cards */
+/* CARDS */
 .card-group {
   text-align: center;
   margin-top: 40px;
@@ -113,6 +170,12 @@ nav a:hover {
   border-radius: 10px;
   vertical-align: top;
   box-shadow: 0 0 10px var(--accent-red);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05) rotate(-1deg);
+  box-shadow: 0 0 25px var(--accent-red);
 }
 
 .card img {
@@ -131,7 +194,7 @@ nav a:hover {
   line-height: 1.4em;
 }
 
-/* Table */
+/* TABLE */
 table {
   margin: 30px auto;
   width: 75%;
@@ -163,13 +226,7 @@ tr:hover {
   transition: 0.2s ease-in-out;
 }
 
-/* Sections */
-section {
-  text-align: center;
-  color: var(--text-light);
-}
-
-/* Gallery */
+/* GALLERY */
 .gallery {
   text-align: center;
   margin: 40px 0;
@@ -218,10 +275,22 @@ section {
   display: block;
 }
 
-/* Media Query */
+/* VIDEO */
+.video-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.video-container iframe {
+  border: 3px solid var(--accent-red);
+  border-radius: 8px;
+  box-shadow: 0 0 20px var(--accent-red);
+}
+
 @media (max-width: 600px) {
   nav ul {
     flex-direction: column;
+    gap: 15px;
   }
 
   .card-group {
@@ -238,16 +307,4 @@ section {
     width: 90%;
     max-width: 350px;
   }
-}
-
-/* Video */
-.video-container {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.video-container iframe {
-  border: 3px solid var(--accent-red);
-  border-radius: 8px;
-  box-shadow: 0 0 20px var(--accent-red);
 }
