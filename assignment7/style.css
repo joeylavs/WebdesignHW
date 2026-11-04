@@ -1,0 +1,768 @@
+/* ========================================
+   HUMAN FIRST
+   MAIN STYLESHEET
+   ======================================== */
+
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f7f4ee;
+    color: #172b29;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   HEADER + NAVIGATION
+   ======================================== */
+
+header {
+    background-color: #f7f4ee;
+    border-bottom: 1px solid #d8d4ca;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* LOGO */
+
+.logo {
+    color: #172b29;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #d9643b;
+}
+
+
+/* NAVIGATION */
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    color: #172b29;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #d9643b;
+}
+
+
+/* ========================================
+   GENERAL STYLES
+   ======================================== */
+
+.eyebrow {
+    color: #d9643b;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+}
+
+
+/* BUTTONS */
+
+.button {
+    display: inline-block;
+
+    background-color: #172b29;
+    color: white;
+
+    padding: 15px 28px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #d9643b;
+    transform: translateY(-3px);
+}
+
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    max-width: 720px;
+    margin-bottom: 55px;
+}
+
+.section-heading h2 {
+    font-size: 45px;
+    line-height: 1.1;
+}
+
+.centered {
+    text-align: center;
+    margin: 0 auto 60px;
+}
+
+.centered > p:last-child {
+    color: #67706e;
+    margin-top: 20px;
+}
+
+
+/* ========================================
+   HOME PAGE HERO
+   ======================================== */
+
+.hero {
+    max-width: 1200px;
+    min-height: 680px;
+
+    margin: 0 auto;
+    padding: 90px 40px;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* HERO TEXT */
+
+.hero h1 {
+    max-width: 700px;
+
+    font-size: clamp(50px, 6vw, 82px);
+
+    line-height: 0.98;
+
+    letter-spacing: -4px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: #d9643b;
+}
+
+.hero-description {
+    max-width: 520px;
+
+    margin: 30px 0;
+
+    font-size: 19px;
+
+    color: #53605e;
+}
+
+
+/* ========================================
+   HERO VISUAL
+   ======================================== */
+
+.hero-visual {
+    position: relative;
+
+    min-height: 480px;
+
+    background-color: #bad2c8;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* DECORATIVE CIRCLES */
+
+.circle {
+    position: absolute;
+
+    border-radius: 50%;
+}
+
+.circle-one {
+    width: 310px;
+    height: 310px;
+
+    background-color: #d9643b;
+
+    top: -80px;
+
+    right: -70px;
+}
+
+.circle-two {
+    width: 220px;
+    height: 220px;
+
+    border: 35px solid #f4c95d;
+
+    bottom: -60px;
+
+    left: -50px;
+}
+
+
+/* WHITE CARD */
+
+.visual-card {
+    position: relative;
+
+    width: 75%;
+
+    padding: 40px;
+
+    background-color: rgba(255, 255, 255, 0.92);
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+
+    z-index: 2;
+}
+
+.visual-card p {
+    color: #d9643b;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.visual-card h2 {
+    font-size: 27px;
+
+    line-height: 1.3;
+}
+
+
+/* ========================================
+   HOME ABOUT SECTION
+   ======================================== */
+
+.about {
+    background-color: #172b29;
+
+    color: white;
+
+    padding: 100px max(40px, calc((100% - 1120px) / 2));
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+}
+
+.about-text {
+    color: #d6dfdc;
+
+    font-size: 18px;
+}
+
+.about-text p + p {
+    margin-top: 20px;
+}
+
+
+/* QUOTE */
+
+.quote {
+    border-left: 4px solid #f4c95d;
+
+    padding-left: 35px;
+
+    font-size: 27px;
+
+    line-height: 1.4;
+}
+
+
+/* ========================================
+   RESOURCES
+   ======================================== */
+
+.resources {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 110px 40px;
+}
+
+
+/* ========================================
+   CARDS
+   ======================================== */
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.card {
+    min-height: 280px;
+
+    padding: 35px 25px;
+
+    background-color: white;
+
+    border-top: 5px solid #bad2c8;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    border-color: #d9643b;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.card-number {
+    color: #d9643b;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.card h3 {
+    margin: 35px 0 15px;
+
+    font-size: 22px;
+}
+
+.card p {
+    color: #67706e;
+
+    font-size: 15px;
+}
+
+
+/* ========================================
+   CALL TO ACTION
+   ======================================== */
+
+.cta {
+    padding: 100px 40px;
+
+    background-color: #d9643b;
+
+    color: white;
+
+    text-align: center;
+}
+
+.cta .eyebrow {
+    color: #172b29;
+}
+
+.cta h2 {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    font-size: 50px;
+
+    line-height: 1.1;
+}
+
+.cta > p:not(.eyebrow) {
+    max-width: 600px;
+
+    margin: 25px auto 35px;
+}
+
+.light-button {
+    background-color: #f7f4ee;
+
+    color: #172b29;
+}
+
+.light-button:hover {
+    background-color: #172b29;
+
+    color: white;
+}
+
+
+/* ========================================
+   ABOUT PAGE HERO
+   ======================================== */
+
+.about-page-hero {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 120px 40px;
+}
+
+.about-page-hero h1 {
+    max-width: 850px;
+
+    font-size: clamp(50px, 7vw, 85px);
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+}
+
+.about-page-hero > p:last-child {
+    max-width: 650px;
+
+    margin-top: 30px;
+
+    font-size: 19px;
+
+    color: #67706e;
+}
+
+
+/* ========================================
+   ABOUT PAGE MISSION
+   ======================================== */
+
+.mission-section {
+    background-color: #172b29;
+
+    color: white;
+
+    padding: 100px max(40px, calc((100% - 1120px) / 2));
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 100px;
+}
+
+.mission-title h2 {
+    font-size: 45px;
+
+    line-height: 1.15;
+}
+
+.mission-text {
+    color: #d6dfdc;
+
+    font-size: 18px;
+}
+
+.mission-text p + p {
+    margin-top: 25px;
+}
+
+
+/* ========================================
+   ABOUT VALUES SECTION
+   ======================================== */
+
+.about-values {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 110px 40px;
+}
+
+
+/* ========================================
+   ABOUT MESSAGE
+   ======================================== */
+
+.about-message {
+    background-color: #bad2c8;
+
+    text-align: center;
+
+    padding: 110px 40px;
+}
+
+.about-message blockquote {
+    max-width: 850px;
+
+    margin: 0 auto 30px;
+
+    color: #172b29;
+
+    font-size: clamp(40px, 5vw, 65px);
+
+    font-weight: bold;
+
+    line-height: 1.1;
+}
+
+.about-message > p:last-child {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    color: #435451;
+
+    font-size: 17px;
+}
+
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    padding: 60px 40px;
+
+    background-color: #101d1c;
+
+    color: #aebbb8;
+
+    text-align: center;
+}
+
+.footer-logo {
+    margin-bottom: 10px;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.footer-logo span {
+    color: #d9643b;
+}
+
+.footer-links {
+    margin: 30px 0;
+}
+
+.footer-links a {
+    margin: 0 15px;
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #f4c95d;
+}
+
+.copyright {
+    font-size: 12px;
+}
+
+
+/* ========================================
+   TABLET
+   ======================================== */
+
+@media (max-width: 850px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-section {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media (max-width: 600px) {
+
+    /* NAVIGATION */
+
+    .navbar {
+        flex-direction: column;
+
+        gap: 20px;
+
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+
+    /* HOME HERO */
+
+    .hero {
+        padding: 60px 25px;
+
+        gap: 40px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+    .hero-visual {
+        min-height: 350px;
+    }
+
+    .visual-card {
+        width: 85%;
+
+        padding: 25px;
+    }
+
+
+    /* ABOUT PAGE */
+
+    .about-page-hero {
+        padding: 70px 25px;
+    }
+
+    .about-page-hero h1 {
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+    .mission-section {
+        padding: 70px 25px;
+    }
+
+    .mission-title h2 {
+        font-size: 36px;
+    }
+
+    .about-values {
+        padding: 70px 25px;
+    }
+
+    .about-message {
+        padding: 70px 25px;
+    }
+
+
+    /* SECTIONS */
+
+    .about,
+    .resources,
+    .cta {
+        padding: 70px 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .cta h2 {
+        font-size: 36px;
+    }
+
+
+    /* CARDS */
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 50px 25px;
+    }
+
+    .footer-links {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+}
