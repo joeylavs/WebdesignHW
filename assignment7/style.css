@@ -115,12 +115,17 @@ header {
 
     padding: 15px 28px;
 
+    border: none;
+
     text-decoration: none;
     text-transform: uppercase;
 
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 1px;
+
+    cursor: pointer;
 
     transition: 0.3s;
 }
@@ -166,7 +171,6 @@ header {
     padding: 90px 40px;
 
     display: grid;
-
     grid-template-columns: 1.1fr 0.9fr;
 
     gap: 70px;
@@ -183,7 +187,6 @@ header {
     font-size: clamp(50px, 6vw, 82px);
 
     line-height: 0.98;
-
     letter-spacing: -4px;
 }
 
@@ -252,7 +255,7 @@ header {
 }
 
 
-/* WHITE MESSAGE CARD */
+/* HERO WHITE CARD */
 
 .visual-card {
     position: relative;
@@ -272,9 +275,7 @@ header {
     color: #d9643b;
 
     font-size: 11px;
-
     letter-spacing: 2px;
-
     font-weight: bold;
 
     margin-bottom: 15px;
@@ -287,7 +288,7 @@ header {
 
 
 /* ========================================
-   HOME EXPLORE / HUMAN WORK SECTIONS
+   HOME EXPLORE SECTIONS
    ======================================== */
 
 .home-explore {
@@ -298,15 +299,9 @@ header {
     padding: 110px 40px;
 }
 
-
-/* Reduce space between the two explore sections */
-
 .home-explore + .home-explore {
     padding-top: 40px;
 }
-
-
-/* THREE COLUMN GRID */
 
 .explore-grid {
     display: grid;
@@ -315,9 +310,6 @@ header {
 
     gap: 25px;
 }
-
-
-/* EXPLORE CARDS */
 
 .explore-card {
     min-height: 300px;
@@ -345,9 +337,6 @@ header {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
 
-
-/* EXPLORE NUMBERS */
-
 .explore-number {
     color: #d9643b;
 
@@ -357,9 +346,6 @@ header {
     letter-spacing: 2px;
 }
 
-
-/* EXPLORE TITLES */
-
 .explore-card h3 {
     margin: 35px 0 15px;
 
@@ -368,9 +354,6 @@ header {
     line-height: 1.2;
 }
 
-
-/* EXPLORE DESCRIPTION */
-
 .explore-card p {
     color: #67706e;
 
@@ -378,9 +361,6 @@ header {
 
     margin-bottom: 25px;
 }
-
-
-/* EXPLORE LINK */
 
 .explore-link {
     margin-top: auto;
@@ -396,7 +376,7 @@ header {
 
 
 /* ========================================
-   HOME STATEMENT / TAKE ACTION
+   HOME STATEMENT
    ======================================== */
 
 .home-statement {
@@ -438,7 +418,6 @@ header {
 
 .home-statement + .home-statement {
     background-color: #172b29;
-
     color: white;
 }
 
@@ -455,7 +434,7 @@ header {
 
 
 /* ========================================
-   HOME ABOUT SECTION
+   GENERAL ABOUT SECTION
    ======================================== */
 
 .about {
@@ -484,9 +463,6 @@ header {
     margin-top: 20px;
 }
 
-
-/* QUOTE */
-
 .quote {
     border-left: 4px solid #f4c95d;
 
@@ -511,9 +487,7 @@ header {
 }
 
 
-/* ========================================
-   CARDS
-   ======================================== */
+/* RESOURCE CARDS */
 
 .card-grid {
     display: grid;
@@ -524,13 +498,16 @@ header {
 }
 
 .card {
-    min-height: 280px;
+    min-height: 300px;
 
     padding: 35px 25px;
 
     background-color: white;
 
     border-top: 5px solid #bad2c8;
+
+    display: flex;
+    flex-direction: column;
 
     transition: 0.3s;
 }
@@ -555,12 +532,40 @@ header {
     margin: 35px 0 15px;
 
     font-size: 22px;
+
+    line-height: 1.2;
 }
 
 .card p {
     color: #67706e;
 
     font-size: 15px;
+}
+
+
+/* RESOURCE LINKS */
+
+.resource-link {
+    display: inline-block;
+
+    margin-top: auto;
+    padding-top: 25px;
+
+    color: #d9643b;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition: color 0.3s;
+}
+
+.resource-link:hover {
+    color: #172b29;
 }
 
 
@@ -730,6 +735,425 @@ header {
 
 
 /* ========================================
+   CONTACT PAGE HERO
+   ======================================== */
+
+.contact-hero {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 100px 40px 90px;
+}
+
+.contact-hero h1 {
+    max-width: 900px;
+
+    font-size: clamp(50px, 7vw, 82px);
+
+    line-height: 1;
+
+    letter-spacing: -4px;
+}
+
+.contact-hero h1 span {
+    display: block;
+
+    color: #d9643b;
+}
+
+.contact-hero > p:last-child {
+    max-width: 720px;
+
+    margin-top: 30px;
+
+    color: #67706e;
+
+    font-size: 19px;
+}
+
+
+/* ========================================
+   CONTACT MAIN AREA
+   ======================================== */
+
+.contact-main {
+    padding: 100px max(40px, calc((100% - 1120px) / 2));
+
+    background-color: #172b29;
+
+    display: grid;
+
+    grid-template-columns: 0.9fr 1.1fr;
+
+    gap: 90px;
+
+    align-items: start;
+}
+
+
+/* LEFT SIDE */
+
+.contact-left {
+    color: white;
+}
+
+.contact-left .eyebrow {
+    color: #f4c95d;
+}
+
+.contact-left h2 {
+    max-width: 450px;
+
+    margin-bottom: 25px;
+
+    font-size: 48px;
+
+    line-height: 1.1;
+}
+
+.contact-intro {
+    max-width: 520px;
+
+    margin-bottom: 45px;
+
+    color: #d6dfdc;
+
+    font-size: 17px;
+}
+
+
+/* CONTACT INFORMATION ROWS */
+
+.contact-item {
+    padding: 25px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+
+    display: grid;
+
+    grid-template-columns: 55px 1fr;
+
+    gap: 15px;
+}
+
+.contact-item:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.contact-number {
+    color: #d9643b;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.contact-item h3 {
+    margin-bottom: 6px;
+
+    color: white;
+
+    font-size: 18px;
+}
+
+.contact-item p {
+    color: #bdcbc8;
+
+    font-size: 15px;
+}
+
+.contact-item a {
+    color: #f4c95d;
+
+    text-decoration: none;
+
+    font-size: 16px;
+}
+
+.contact-item a:hover {
+    color: white;
+}
+
+
+/* ========================================
+   CONTACT FORM BOX
+   ======================================== */
+
+.contact-form-box {
+    padding: 45px;
+
+    background-color: #ffffff;
+
+    border-top: 7px solid #d9643b;
+
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.18);
+}
+
+.contact-form-box h2 {
+    margin-bottom: 10px;
+
+    color: #172b29;
+
+    font-size: 38px;
+
+    line-height: 1.1;
+}
+
+.form-description {
+    margin-bottom: 25px;
+
+    color: #67706e;
+}
+
+
+/* FORM */
+
+.contact-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.form-group label {
+    color: #172b29;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #cbc9c1;
+
+    background-color: #f7f4ee;
+
+    color: #172b29;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    transition: border-color 0.2s,
+                box-shadow 0.2s;
+}
+
+.form-group input,
+.form-group select {
+    min-height: 50px;
+}
+
+.form-group textarea {
+    min-height: 150px;
+
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+
+    border-color: #d9643b;
+
+    box-shadow: 0 0 0 3px rgba(217, 100, 59, 0.13);
+}
+
+
+/* CONTACT BUTTON */
+
+.contact-button {
+    align-self: flex-start;
+
+    margin-top: 5px;
+
+    padding: 16px 26px;
+
+    border: none;
+
+    background-color: #d9643b;
+
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #172b29;
+
+    transform: translateY(-3px);
+}
+
+.form-note {
+    padding-top: 15px;
+
+    border-top: 1px solid #e4e0d8;
+
+    color: #7b817f;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   CONTACT ACTION / GET INVOLVED
+   ======================================== */
+
+.contact-actions {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 110px 40px;
+}
+
+.contact-action-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.contact-action-card {
+    min-height: 300px;
+
+    padding: 35px;
+
+    background-color: white;
+
+    border-bottom: 5px solid #bad2c8;
+
+    display: flex;
+
+    flex-direction: column;
+
+    transition: 0.3s;
+}
+
+.contact-action-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #d9643b;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.contact-action-card > span {
+    color: #d9643b;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.contact-action-card h3 {
+    margin: 35px 0 15px;
+
+    color: #172b29;
+
+    font-size: 23px;
+}
+
+.contact-action-card p {
+    color: #67706e;
+
+    font-size: 15px;
+}
+
+.contact-action-card a {
+    margin-top: auto;
+
+    padding-top: 25px;
+
+    color: #d9643b;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.contact-action-card a:hover {
+    color: #172b29;
+}
+
+
+/* ========================================
+   CONTACT FINAL MESSAGE
+   ======================================== */
+
+.contact-final {
+    padding: 100px 40px;
+
+    background-color: #bad2c8;
+
+    text-align: center;
+}
+
+.contact-final .eyebrow {
+    margin-bottom: 25px;
+}
+
+.contact-final h2 {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    color: #172b29;
+
+    font-size: clamp(40px, 5vw, 62px);
+
+    line-height: 1.05;
+}
+
+.contact-final h2 span {
+    display: block;
+
+    color: #d9643b;
+}
+
+
+/* ========================================
    FOOTER
    ======================================== */
 
@@ -749,7 +1173,6 @@ footer {
     color: white;
 
     font-size: 22px;
-
     font-weight: bold;
 
     letter-spacing: 2px;
@@ -813,6 +1236,20 @@ footer {
     .hero h1 {
         letter-spacing: -2px;
     }
+
+
+    /* CONTACT */
+
+    .contact-main {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .contact-action-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 
@@ -915,7 +1352,7 @@ footer {
     }
 
 
-    /* ABOUT PAGE */
+    /* ABOUT */
 
     .about-page-hero {
         padding: 70px 25px;
@@ -944,10 +1381,20 @@ footer {
     }
 
 
+    /* RESOURCES */
+
+    .resources {
+        padding: 70px 25px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+
     /* GENERAL SECTIONS */
 
     .about,
-    .resources,
     .cta {
         padding: 70px 25px;
     }
@@ -961,10 +1408,74 @@ footer {
     }
 
 
-    /* CARDS */
+    /* ========================================
+       CONTACT MOBILE
+       ======================================== */
 
-    .card-grid {
+    .contact-hero {
+        padding: 70px 25px;
+    }
+
+    .contact-hero h1 {
+        font-size: 48px;
+
+        letter-spacing: -2px;
+    }
+
+    .contact-hero > p:last-child {
+        font-size: 17px;
+    }
+
+    .contact-main {
+        padding: 70px 25px;
+
         grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .contact-left h2 {
+        font-size: 38px;
+    }
+
+    .contact-item {
+        grid-template-columns: 40px 1fr;
+    }
+
+    .contact-form-box {
+        padding: 30px 25px;
+    }
+
+    .contact-form-box h2 {
+        font-size: 32px;
+    }
+
+    .contact-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .contact-actions {
+        padding: 75px 25px;
+    }
+
+    .contact-action-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-action-card {
+        min-height: 260px;
+
+        padding: 30px 25px;
+    }
+
+    .contact-final {
+        padding: 75px 25px;
+    }
+
+    .contact-final h2 {
+        font-size: 38px;
     }
 
 
@@ -985,4 +1496,5 @@ footer {
     .footer-links a {
         margin: 0;
     }
+
 }
